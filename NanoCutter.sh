@@ -80,10 +80,12 @@ if [[ ! -d "$input_dir" ]]; then
 	exit 1
 fi
 
+mkdir -p $output_dir/fastq > /dev/null 2>&1
+
 ls "$input_dir" > list.txt
 list=list.txt
 ###############################################################################
-
+	> $output_dir/read_counts.txt
 	source venv/bin/activate
 
 	for i in $(cat $list); do
@@ -108,14 +110,15 @@ list=list.txt
 		python3.9 scripts/cut_sequences.py \
 		--input-type fastq \
 		--input-file $input_dir/$i \
-		--coords-dir $output_dir/raw_files/$i \
+		--coords-dir $output_dir/$i \
 		--out-dir $output_dir/fastq \
 		--threads 40
 
 		python3.9 scripts/count.py \
 		--input-file $input_dir/$i \
 		--input-type fastq \
-		--threads 40
+		--threads 40 \
+		>> $output_dir/read_counts.txt
 
 	done
 

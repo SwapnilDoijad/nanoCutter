@@ -27,6 +27,10 @@ To install and set up NanoCutter, follow these steps:
    ```bash
    ./install.sh
    ```
+5. Run test dataset:
+   ```bash
+   ./NanoCutter.sh -i test_data/fastq -o test_results_fastq
+   ```
 
 ## Usage
 ```bash
