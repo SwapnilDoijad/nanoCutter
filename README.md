@@ -39,7 +39,8 @@ Options:
         -o, --output-dir DIR     Set the output directory for results
 
 Examples:
-        ./NanoCutter.sh -i test_data/fasta -o test_results
+        ./NanoCutter.sh -i test_data/fasta -o test_results_fasta
+		./NanoCutter.sh -i test_data/fastq -o test_results_fastq
 ```
 ---
 🧑‍💻 Author: Swapnil Doijad (swapnil.doijad@gmail.com)  

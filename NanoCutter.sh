@@ -80,15 +80,12 @@ if [[ ! -d "$input_dir" ]]; then
 	exit 1
 fi
 
-mkdir -p "$(dirname "$output_dir")" 2>/dev/null || true
-
 ls "$input_dir" > list.txt
 list=list.txt
 ###############################################################################
 
 	source venv/bin/activate
 
-	mkdir -p $output_dir/fastq > /dev/null 2>&1
 	for i in $(cat $list); do
 		echo $i 
 
