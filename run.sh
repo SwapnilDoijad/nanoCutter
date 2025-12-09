@@ -1,10 +1,5 @@
 #!/bin/bash
 ###############################################################################
-	# python3.9 -m venv venv
-	# source venv/bin/activate
-	# pip install --upgrade pip
-	# pip install matplotlib
-###############################################################################
 ## inputs
 	current_dir=$(pwd)
 	input_dir=test_data/fasta
