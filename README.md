@@ -3,8 +3,6 @@ NanoCutter is a tool to cut the Nanopore concatemeric and chimeric reads into in
 
 Nanopore sequencing generates concatemeric or chimeric reads due to different reasons (circular DNA, erroneous ligation or failure of the pore/basecaller to split signals correctly).
 
-NanoCutter makes use of length of contigs and key annotations and classifies contigs (see below for definitions). 
-
 ## Prerequisites
 - Python 3.9
 
